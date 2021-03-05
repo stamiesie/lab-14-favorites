@@ -27,27 +27,24 @@ async function run() {
     await Promise.all(
       movies.map(({
         title,
-        tagline,
-        budget,
+        popularity,
         release_date,
         poster,
         movie_api_id,
       }) => {
         return client.query(`
                     INSERT INTO movies (
-                      title, 
-                      tagline, 
-                      budget, 
+                      title,  
+                      popularity, 
                       release_date, 
                       poster, 
                       movie_api_id,
                       owner_id)
-                    VALUES ($1, $2, $3, $4, $5, $6, $7);
+                    VALUES ($1, $2, $3, $4, $5, $6);
                 `,
           [
             title,
-            tagline,
-            budget,
+            popularity,
             release_date,
             poster,
             movie_api_id,

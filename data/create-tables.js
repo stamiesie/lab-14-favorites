@@ -20,8 +20,7 @@ async function run() {
                 CREATE TABLE movies (
                     id SERIAL PRIMARY KEY NOT NULL,
                     title VARCHAR(512) NOT NULL,
-                    tagline VARCHAR(512) NOT NULL,
-                    budget INTEGER NOT NULL,
+                    popularity VARCHAR(512) NOT NULL,
                     release_date INTEGER NOT NULL,
                     poster VARCHAR(512) NOT NULL,
                     movie_api_id INTEGER NOT NULL,
